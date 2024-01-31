@@ -12,6 +12,7 @@ class PokemonViewModel: ObservableObject {
     
     // MARK: - APIClient
     @Published var pokemonMainModel: [PokemonPage] = []
+    @Published var pokemonDetail: [PokemonDetailModel] = []
     
     var cancellables = Set<AnyCancellable>()
     
@@ -30,6 +31,19 @@ class PokemonViewModel: ObservableObject {
             
             } receiveValue: { [weak self] appResponse in
                 self?.pokemonMainModel = appResponse.results
+                self?.fetchDetailPokemon(model: self?.pokemonMainModel ?? [])
             } .store(in: &cancellables)
+    }
+    // MARK: - Call second method to obtain properties of pokemon
+
+    func fetchDetailPokemon(model: [PokemonPage]) {
+        for value in model {
+            apiClient.getDetailPokemon(urlImage: value.url )
+                .sink { _ in
+                } receiveValue: { [weak self] appResponse in
+                    self?.pokemonDetail.append(appResponse)
+                    self?.pokemonDetail = (self?.pokemonDetail.sorted(by:{ $0.id < $1.id }))!
+                } .store(in: &cancellables)
+        }
     }
 }

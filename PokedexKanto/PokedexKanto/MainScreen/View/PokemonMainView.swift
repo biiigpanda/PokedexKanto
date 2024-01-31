@@ -17,9 +17,9 @@ struct PokemonMainView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: gridElements, content: {
-                    ForEach(viewModel.pokemonMainModel) { pokemon in
-                        ImagePokemon(pokemon: pokemon)
-                    }
+                        ForEach(viewModel.pokemonDetail) { pokemonDetail in
+                            ImagePokemon(pokemonDetail: pokemonDetail)
+                        }
                 })
             }
             .navigationTitle("Pokedex Kanto")

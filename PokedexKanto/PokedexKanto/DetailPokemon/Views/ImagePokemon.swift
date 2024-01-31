@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ImagePokemon: View {
     @EnvironmentObject var vm: PokemonViewModel
-    let pokemon: PokemonPage
+    let pokemonDetail: PokemonDetailModel
     var body: some View {
         VStack{
             ZStack{
@@ -17,7 +17,8 @@ struct ImagePokemon: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxHeight:180)
-                AsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"))
+                // get index
+                AsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(pokemonDetail.id).png"))
                 { image in
                     image.resizable()
                         .aspectRatio(contentMode: .fit)
@@ -38,7 +39,7 @@ struct ImagePokemon: View {
                     .scaledToFit()
                     .frame(width:120, height: 50)
             }
-            Text("\(pokemon.name)")
+            Text("\(pokemonDetail.name)")
         }
     }
 }

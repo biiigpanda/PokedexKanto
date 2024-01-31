@@ -27,6 +27,16 @@ final class ApiClientManager {
             .eraseToAnyPublisher()
     }
     
+    func getDetailPokemon(urlImage: String)-> AnyPublisher<PokemonDetailModel, Error>{
+        let urlModel = URL(string: urlImage)!
+        return URLSession.shared.dataTaskPublisher(for: urlModel)
+            .receive(on: DispatchQueue.main)
+            .tryMap(handleOutput)
+            .decode(type: PokemonDetailModel.self, decoder: JSONDecoder())
+            .receive(on: RunLoop.main)
+            .eraseToAnyPublisher()
+    }
+    
     func handleOutput(output: URLSession.DataTaskPublisher.Output) throws -> Data {
         guard let response = output.response as? HTTPURLResponse,
               response.statusCode >= 200 && response.statusCode < 300 else {
