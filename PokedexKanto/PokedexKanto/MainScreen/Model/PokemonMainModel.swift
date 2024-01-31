@@ -12,14 +12,14 @@ struct PokemonMainModel: Decodable {
     let count: Int
     let next : String
     let previous : Int?
-    let results : [DashBoardModel]
+    let results : [PokemonPage]
 
 }
 
-struct DashBoardModel: Identifiable, Decodable {
+struct PokemonPage: Identifiable, Decodable {
     
-    let name: String
-    let url : String
+    var name: String
+    var url : String
     var id = UUID()
     
     enum CodingKeys: String, CodingKey {

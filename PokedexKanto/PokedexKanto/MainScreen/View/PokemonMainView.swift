@@ -9,31 +9,24 @@ import SwiftUI
 
 struct PokemonMainView: View {
     @State var searchText = ""
-    var elements = 1...10
+    @StateObject var viewModel: PokemonViewModel = PokemonViewModel(apiClient: ApiClientManager())
+    
     let gridElements = [GridItem(.flexible(minimum:50)),GridItem(.flexible(minimum:50))]
     
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: gridElements, content: {
-//                    ForEach(vm.pokemons) { pokemon in
-                    ImagePokemon()
-                    ImagePokemon()
-                    ImagePokemon()
-                    ImagePokemon()
-                    ImagePokemon()
-                    ImagePokemon()
-                    ImagePokemon()
-                    ImagePokemon()
-                    ImagePokemon()
-                    ImagePokemon()
-//                    }
+                    ForEach(viewModel.pokemonMainModel) { pokemon in
+                        ImagePokemon(pokemon: pokemon)
+                    }
                 })
             }
             .navigationTitle("Pokedex Kanto")
             .navigationBarTitleDisplayMode(.inline)
         }
         .searchable(text: $searchText)
+        .environmentObject(viewModel)
         
     }
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ImagePokemon: View {
+    @EnvironmentObject var vm: PokemonViewModel
+    let pokemon: PokemonPage
     var body: some View {
         VStack{
             ZStack{
@@ -36,11 +38,11 @@ struct ImagePokemon: View {
                     .scaledToFit()
                     .frame(width:120, height: 50)
             }
-            Text("Bulbasaur")
+            Text("\(pokemon.name)")
         }
     }
 }
 
-#Preview {
-    ImagePokemon()
-}
+//#Preview {
+//    ImagePokemon()
+//}

@@ -11,13 +11,15 @@ import Combine
 class PokemonViewModel: ObservableObject {
     
     // MARK: - APIClient
-    @Published var pokemonMainModel: [DashBoardModel] = []
+    @Published var pokemonMainModel: [PokemonPage] = []
+    
     var cancellables = Set<AnyCancellable>()
     
     let apiClient: ApiClientManager
     
     init(apiClient: ApiClientManager)  {
         self.apiClient = apiClient
+        self.fetchModel()
     }
     
     // MARK: - Call first method to obtain name and url for image
