@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ImagePokemon: View {
-    @EnvironmentObject var vm: PokemonViewModel
-    let pokemonDetail: PokemonDetailModel
+    var pokemonDetail: PokemonDetailModel
     var body: some View {
         VStack{
             ZStack{
@@ -17,7 +16,6 @@ struct ImagePokemon: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxHeight:180)
-                // get index
                 AsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(pokemonDetail.id).png"))
                 { image in
                     image.resizable()
@@ -27,7 +25,7 @@ struct ImagePokemon: View {
                 }.frame(maxHeight:180)
                     .background(.white.opacity(0.4))
                     .clipShape(Circle())
-            }.padding(0)
+            }
             VStack {
                 Image("img_grassType")
                     .resizable()

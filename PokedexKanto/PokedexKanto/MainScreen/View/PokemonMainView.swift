@@ -15,19 +15,22 @@ struct PokemonMainView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVGrid(columns: gridElements, content: {
-                        ForEach(viewModel.pokemonDetail) { pokemonDetail in
-                            ImagePokemon(pokemonDetail: pokemonDetail)
-                        }
-                })
+            if viewModel.isFinished == false {
+                ProgressView("Cargando Información...")
+                    .scaleEffect(CGSize(width: 1.5, height: 1.5))
+            } else {
+                ScrollView {
+                        LazyVGrid(columns: gridElements, content: {
+                                ForEach(viewModel.pokemonDetail) { pokemonDetail in
+                                    ImagePokemon(pokemonDetail: pokemonDetail)
+                                }
+                        })
+                }
+                .navigationTitle("Pokedex Kanto")
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationTitle("Pokedex Kanto")
-            .navigationBarTitleDisplayMode(.inline)
         }
         .searchable(text: $searchText)
-        .environmentObject(viewModel)
-        
     }
 }
 
