@@ -1,8 +1,18 @@
 {
   "images" : [
     {
+      "filename" : "copia.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
       "filename" : "logoPokeball.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

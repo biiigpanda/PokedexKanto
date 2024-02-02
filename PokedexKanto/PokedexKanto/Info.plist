@@ -8,5 +8,12 @@
 		<string>Pokemon Solid.ttf</string>
 		<string>Sans Statement Regular.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIImageName</key>
+		<string>img_launchScreen</string>
+		<key>UIImageRespectsSafeAreaInsets</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
