@@ -14,6 +14,7 @@ class PokemonViewModel: ObservableObject {
     @Published var pokemonMainModel: [PokemonPage] = []
     @Published var pokemonDetail: [PokemonDetailModel] = []
     @Published var isFinished: Bool = false
+    @Published var types: [String] = []
 
     
     var cancellables = Set<AnyCancellable>()
@@ -55,5 +56,51 @@ class PokemonViewModel: ObservableObject {
                     }
                 } .store(in: &cancellables)
         }
+    }
+    
+    // MARK: - Set String for image type
+
+    func setImageType(typeName: [TypeElement]) -> [String] {
+        var typesArray: [String] = []
+        for type in typeName {
+            if type.type.name == "grass" {
+                typesArray.append("img_grassType")
+            } else if type.type.name == "fire" {
+                typesArray.append("img_fireType")
+            } else if type.type.name == "bug" {
+                typesArray.append("img_bugType")
+            } else if type.type.name == "electric" {
+                typesArray.append("img_electricType")
+            } else if type.type.name == "fighting" {
+                typesArray.append("img_fightingType")
+            } else if type.type.name == "ghost" {
+                typesArray.append("img_ghostType")
+            } else if type.type.name == "ground" {
+                typesArray.append("img_groundType")
+            } else if type.type.name == "normal" {
+                typesArray.append("img_normalType")
+            } else if type.type.name == "poison" {
+                typesArray.append("img_poisonType")
+            } else if type.type.name == "psychic" {
+                typesArray.append("img_psychicType")
+            } else if type.type.name == "water" {
+                typesArray.append("img_waterType")
+            } else if type.type.name == "flying" {
+                typesArray.append("img_flyingType")
+            } else if type.type.name == "rock" {
+                typesArray.append("img_rockType")
+            } else if type.type.name == "ice" {
+                typesArray.append("img_iceType")
+            } else if type.type.name == "dragon" {
+                typesArray.append("img_dragonType")
+            }else if type.type.name == "dark" {
+                typesArray.append("img_darkType")
+            } else if type.type.name == "fairy" {
+                typesArray.append("img_fairyType")
+            } else if type.type.name == "steel" {
+                typesArray.append("img_steelType")
+            }
+        }
+        return typesArray
     }
 }

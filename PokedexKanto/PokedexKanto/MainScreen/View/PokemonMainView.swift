@@ -31,6 +31,7 @@ struct PokemonMainView: View {
             }
         }
         .searchable(text: $searchText)
+        .environmentObject(viewModel)
     }
 }
 

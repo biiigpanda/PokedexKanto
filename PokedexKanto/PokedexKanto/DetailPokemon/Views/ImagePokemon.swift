@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ImagePokemon: View {
+    @EnvironmentObject var viewModel: PokemonViewModel
     var pokemonDetail: PokemonDetailModel
     var body: some View {
         VStack{
@@ -27,15 +28,14 @@ struct ImagePokemon: View {
                     .clipShape(Circle())
             }
             VStack {
-                Image("img_grassType")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width:120, height: 50)
-                    .padding(-10)
-                Image("img_grassType")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width:120, height: 50)
+                let array: [String] = viewModel.setImageType(typeName: pokemonDetail.types)
+                ForEach(array, id: \.self) { types in
+                    Image(types)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width:120, height: 50)
+                        .padding(-10)
+                }
             }
             Text("\(pokemonDetail.name)")
         }
