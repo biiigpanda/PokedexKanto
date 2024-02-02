@@ -37,7 +37,11 @@ struct ImagePokemon: View {
                         .padding(-10)
                 }
             }
-            Text("\(pokemonDetail.name)")
+            Text("\(pokemonDetail.name.capitalized)")
+                .font(.custom("Ketchum", size: 28))
+                .foregroundStyle(.black)
+                .shadow(radius: 3)
+                
         }
     }
 }

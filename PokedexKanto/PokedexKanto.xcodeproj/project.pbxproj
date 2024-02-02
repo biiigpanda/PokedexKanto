@@ -20,6 +20,9 @@
 		1D97A4FB2B6A4A700024C4DA /* ImagePokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4FA2B6A4A700024C4DA /* ImagePokemon.swift */; };
 		1D97A4FE2B6A603D0024C4DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4FD2B6A603D0024C4DA /* Constants.swift */; };
 		1D97A5012B6AA9BA0024C4DA /* PokemonDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A5002B6AA9BA0024C4DA /* PokemonDetailModel.swift */; };
+		1D97A5052B6CF08D0024C4DA /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D97A5032B6CF08D0024C4DA /* Pokemon Solid.ttf */; };
+		1D97A5062B6CF08D0024C4DA /* Sans Statement Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D97A5042B6CF08D0024C4DA /* Sans Statement Regular.ttf */; };
+		1D97A5092B6CF3D40024C4DA /* Ketchum.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D97A5082B6CF3D40024C4DA /* Ketchum.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,10 @@
 		1D97A4FA2B6A4A700024C4DA /* ImagePokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePokemon.swift; sourceTree = "<group>"; };
 		1D97A4FD2B6A603D0024C4DA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1D97A5002B6AA9BA0024C4DA /* PokemonDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailModel.swift; sourceTree = "<group>"; };
+		1D97A5032B6CF08D0024C4DA /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
+		1D97A5042B6CF08D0024C4DA /* Sans Statement Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sans Statement Regular.ttf"; sourceTree = "<group>"; };
+		1D97A5072B6CF2050024C4DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1D97A5082B6CF3D40024C4DA /* Ketchum.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ketchum.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +113,7 @@
 		1D97A4C02B6A41150024C4DA /* PokedexKanto */ = {
 			isa = PBXGroup;
 			children = (
+				1D97A5072B6CF2050024C4DA /* Info.plist */,
 				1D97A4FC2B6A60340024C4DA /* Resources */,
 				1D97A4F82B6A4A560024C4DA /* DetailPokemon */,
 				1D97A4F52B6A430D0024C4DA /* ApiClient */,
@@ -204,6 +212,7 @@
 		1D97A4FC2B6A60340024C4DA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1D97A5022B6CF0690024C4DA /* Fonts */,
 				1D97A4FD2B6A603D0024C4DA /* Constants.swift */,
 			);
 			path = Resources;
@@ -215,6 +224,16 @@
 				1D97A5002B6AA9BA0024C4DA /* PokemonDetailModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1D97A5022B6CF0690024C4DA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1D97A5082B6CF3D40024C4DA /* Ketchum.otf */,
+				1D97A5032B6CF08D0024C4DA /* Pokemon Solid.ttf */,
+				1D97A5042B6CF08D0024C4DA /* Sans Statement Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +340,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D97A5052B6CF08D0024C4DA /* Pokemon Solid.ttf in Resources */,
 				1D97A4C92B6A41190024C4DA /* Preview Assets.xcassets in Resources */,
+				1D97A5062B6CF08D0024C4DA /* Sans Statement Regular.ttf in Resources */,
+				1D97A5092B6CF3D40024C4DA /* Ketchum.otf in Resources */,
 				1D97A4C62B6A41190024C4DA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +543,7 @@
 				DEVELOPMENT_TEAM = 7V5544LTYB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokedexKanto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,6 +573,7 @@
 				DEVELOPMENT_TEAM = 7V5544LTYB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokedexKanto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
