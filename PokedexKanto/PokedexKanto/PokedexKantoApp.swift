@@ -11,7 +11,7 @@ import SwiftUI
 struct PokedexKantoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PokemonMainView()
         }
     }
 }

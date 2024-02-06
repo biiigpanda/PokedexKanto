@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1D97A4C22B6A41150024C4DA /* PokedexKantoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4C12B6A41150024C4DA /* PokedexKantoApp.swift */; };
-		1D97A4C42B6A41150024C4DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4C32B6A41150024C4DA /* ContentView.swift */; };
 		1D97A4C62B6A41190024C4DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D97A4C52B6A41190024C4DA /* Assets.xcassets */; };
 		1D97A4C92B6A41190024C4DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D97A4C82B6A41190024C4DA /* Preview Assets.xcassets */; };
 		1D97A4D32B6A41190024C4DA /* PokedexKantoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4D22B6A41190024C4DA /* PokedexKantoTests.swift */; };
 		1D97A4DD2B6A41190024C4DA /* PokedexKantoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4DC2B6A41190024C4DA /* PokedexKantoUITests.swift */; };
 		1D97A4DF2B6A41190024C4DA /* PokedexKantoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4DE2B6A41190024C4DA /* PokedexKantoUITestsLaunchTests.swift */; };
+		1D97A4F02B6A42690024C4DA /* PokemonMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4EF2B6A42690024C4DA /* PokemonMainModel.swift */; };
+		1D97A4F22B6A42870024C4DA /* PokemonMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4F12B6A42870024C4DA /* PokemonMainView.swift */; };
+		1D97A4F42B6A42940024C4DA /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4F32B6A42940024C4DA /* PokemonViewModel.swift */; };
+		1D97A4F72B6A43260024C4DA /* ApiClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4F62B6A43260024C4DA /* ApiClientManager.swift */; };
+		1D97A4FB2B6A4A700024C4DA /* ImagePokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4FA2B6A4A700024C4DA /* ImagePokemon.swift */; };
+		1D97A4FE2B6A603D0024C4DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A4FD2B6A603D0024C4DA /* Constants.swift */; };
+		1D97A5012B6AA9BA0024C4DA /* PokemonDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97A5002B6AA9BA0024C4DA /* PokemonDetailModel.swift */; };
+		1D97A5052B6CF08D0024C4DA /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D97A5032B6CF08D0024C4DA /* Pokemon Solid.ttf */; };
+		1D97A5062B6CF08D0024C4DA /* Sans Statement Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D97A5042B6CF08D0024C4DA /* Sans Statement Regular.ttf */; };
+		1D97A5092B6CF3D40024C4DA /* Ketchum.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D97A5082B6CF3D40024C4DA /* Ketchum.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,6 @@
 /* Begin PBXFileReference section */
 		1D97A4BE2B6A41150024C4DA /* PokedexKanto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokedexKanto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D97A4C12B6A41150024C4DA /* PokedexKantoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexKantoApp.swift; sourceTree = "<group>"; };
-		1D97A4C32B6A41150024C4DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D97A4C52B6A41190024C4DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D97A4C82B6A41190024C4DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D97A4CE2B6A41190024C4DA /* PokedexKantoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexKantoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +52,17 @@
 		1D97A4D82B6A41190024C4DA /* PokedexKantoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexKantoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D97A4DC2B6A41190024C4DA /* PokedexKantoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexKantoUITests.swift; sourceTree = "<group>"; };
 		1D97A4DE2B6A41190024C4DA /* PokedexKantoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexKantoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1D97A4EF2B6A42690024C4DA /* PokemonMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMainModel.swift; sourceTree = "<group>"; };
+		1D97A4F12B6A42870024C4DA /* PokemonMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMainView.swift; sourceTree = "<group>"; };
+		1D97A4F32B6A42940024C4DA /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
+		1D97A4F62B6A43260024C4DA /* ApiClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientManager.swift; sourceTree = "<group>"; };
+		1D97A4FA2B6A4A700024C4DA /* ImagePokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePokemon.swift; sourceTree = "<group>"; };
+		1D97A4FD2B6A603D0024C4DA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1D97A5002B6AA9BA0024C4DA /* PokemonDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailModel.swift; sourceTree = "<group>"; };
+		1D97A5032B6CF08D0024C4DA /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
+		1D97A5042B6CF08D0024C4DA /* Sans Statement Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sans Statement Regular.ttf"; sourceTree = "<group>"; };
+		1D97A5072B6CF2050024C4DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1D97A5082B6CF3D40024C4DA /* Ketchum.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ketchum.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +113,12 @@
 		1D97A4C02B6A41150024C4DA /* PokedexKanto */ = {
 			isa = PBXGroup;
 			children = (
+				1D97A5072B6CF2050024C4DA /* Info.plist */,
+				1D97A4FC2B6A60340024C4DA /* Resources */,
+				1D97A4F82B6A4A560024C4DA /* DetailPokemon */,
+				1D97A4F52B6A430D0024C4DA /* ApiClient */,
+				1D97A4EB2B6A42490024C4DA /* MainScreen */,
 				1D97A4C12B6A41150024C4DA /* PokedexKantoApp.swift */,
-				1D97A4C32B6A41150024C4DA /* ContentView.swift */,
 				1D97A4C52B6A41190024C4DA /* Assets.xcassets */,
 				1D97A4C72B6A41190024C4DA /* Preview Content */,
 			);
@@ -125,6 +148,92 @@
 				1D97A4DE2B6A41190024C4DA /* PokedexKantoUITestsLaunchTests.swift */,
 			);
 			path = PokedexKantoUITests;
+			sourceTree = "<group>";
+		};
+		1D97A4EB2B6A42490024C4DA /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1D97A4EE2B6A425A0024C4DA /* Model */,
+				1D97A4ED2B6A42550024C4DA /* View */,
+				1D97A4EC2B6A42500024C4DA /* ViewModel */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		1D97A4EC2B6A42500024C4DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D97A4F32B6A42940024C4DA /* PokemonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D97A4ED2B6A42550024C4DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D97A4F12B6A42870024C4DA /* PokemonMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D97A4EE2B6A425A0024C4DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D97A4EF2B6A42690024C4DA /* PokemonMainModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D97A4F52B6A430D0024C4DA /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				1D97A4F62B6A43260024C4DA /* ApiClientManager.swift */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		1D97A4F82B6A4A560024C4DA /* DetailPokemon */ = {
+			isa = PBXGroup;
+			children = (
+				1D97A4FF2B6AA9A20024C4DA /* Model */,
+				1D97A4F92B6A4A5D0024C4DA /* Views */,
+			);
+			path = DetailPokemon;
+			sourceTree = "<group>";
+		};
+		1D97A4F92B6A4A5D0024C4DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D97A4FA2B6A4A700024C4DA /* ImagePokemon.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D97A4FC2B6A60340024C4DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D97A5022B6CF0690024C4DA /* Fonts */,
+				1D97A4FD2B6A603D0024C4DA /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1D97A4FF2B6AA9A20024C4DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D97A5002B6AA9BA0024C4DA /* PokemonDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D97A5022B6CF0690024C4DA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1D97A5082B6CF3D40024C4DA /* Ketchum.otf */,
+				1D97A5032B6CF08D0024C4DA /* Pokemon Solid.ttf */,
+				1D97A5042B6CF08D0024C4DA /* Sans Statement Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +340,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D97A5052B6CF08D0024C4DA /* Pokemon Solid.ttf in Resources */,
 				1D97A4C92B6A41190024C4DA /* Preview Assets.xcassets in Resources */,
+				1D97A5062B6CF08D0024C4DA /* Sans Statement Regular.ttf in Resources */,
+				1D97A5092B6CF3D40024C4DA /* Ketchum.otf in Resources */,
 				1D97A4C62B6A41190024C4DA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +369,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D97A4C42B6A41150024C4DA /* ContentView.swift in Sources */,
+				1D97A5012B6AA9BA0024C4DA /* PokemonDetailModel.swift in Sources */,
+				1D97A4F72B6A43260024C4DA /* ApiClientManager.swift in Sources */,
+				1D97A4F42B6A42940024C4DA /* PokemonViewModel.swift in Sources */,
+				1D97A4F22B6A42870024C4DA /* PokemonMainView.swift in Sources */,
 				1D97A4C22B6A41150024C4DA /* PokedexKantoApp.swift in Sources */,
+				1D97A4FE2B6A603D0024C4DA /* Constants.swift in Sources */,
+				1D97A4F02B6A42690024C4DA /* PokemonMainModel.swift in Sources */,
+				1D97A4FB2B6A4A700024C4DA /* ImagePokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,17 +537,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PokedexKanto/Preview Content\"";
 				DEVELOPMENT_TEAM = 7V5544LTYB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokedexKanto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,9 +557,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Gallardos.PokedexKanto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -448,17 +572,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PokedexKanto/Preview Content\"";
 				DEVELOPMENT_TEAM = 7V5544LTYB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokedexKanto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,9 +592,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Gallardos.PokedexKanto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
