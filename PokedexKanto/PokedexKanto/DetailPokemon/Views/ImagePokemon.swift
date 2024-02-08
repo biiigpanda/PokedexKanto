@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ImagePokemon: View {
-    @EnvironmentObject var viewModel: PokemonViewModel
+    @ObservedObject var viewModel: PokemonViewModel
     var pokemonDetail: PokemonDetailModel
     var body: some View {
         VStack{

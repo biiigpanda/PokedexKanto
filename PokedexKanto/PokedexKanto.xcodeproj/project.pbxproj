@@ -23,6 +23,8 @@
 		1D97A5052B6CF08D0024C4DA /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D97A5032B6CF08D0024C4DA /* Pokemon Solid.ttf */; };
 		1D97A5062B6CF08D0024C4DA /* Sans Statement Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D97A5042B6CF08D0024C4DA /* Sans Statement Regular.ttf */; };
 		1D97A5092B6CF3D40024C4DA /* Ketchum.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D97A5082B6CF3D40024C4DA /* Ketchum.otf */; };
+		1DCB207D2B737CE40022120A /* DetailPokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB207C2B737CE40022120A /* DetailPokemonView.swift */; };
+		1DCB207F2B7383760022120A /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB207E2B7383760022120A /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		1D97A5042B6CF08D0024C4DA /* Sans Statement Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sans Statement Regular.ttf"; sourceTree = "<group>"; };
 		1D97A5072B6CF2050024C4DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1D97A5082B6CF3D40024C4DA /* Ketchum.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ketchum.otf; sourceTree = "<group>"; };
+		1DCB207C2B737CE40022120A /* DetailPokemonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPokemonView.swift; sourceTree = "<group>"; };
+		1DCB207E2B7383760022120A /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				1D97A4FA2B6A4A700024C4DA /* ImagePokemon.swift */,
+				1DCB207C2B737CE40022120A /* DetailPokemonView.swift */,
+				1DCB207E2B7383760022120A /* Test.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -372,9 +378,11 @@
 				1D97A5012B6AA9BA0024C4DA /* PokemonDetailModel.swift in Sources */,
 				1D97A4F72B6A43260024C4DA /* ApiClientManager.swift in Sources */,
 				1D97A4F42B6A42940024C4DA /* PokemonViewModel.swift in Sources */,
+				1DCB207D2B737CE40022120A /* DetailPokemonView.swift in Sources */,
 				1D97A4F22B6A42870024C4DA /* PokemonMainView.swift in Sources */,
 				1D97A4C22B6A41150024C4DA /* PokedexKantoApp.swift in Sources */,
 				1D97A4FE2B6A603D0024C4DA /* Constants.swift in Sources */,
+				1DCB207F2B7383760022120A /* Test.swift in Sources */,
 				1D97A4F02B6A42690024C4DA /* PokemonMainModel.swift in Sources */,
 				1D97A4FB2B6A4A700024C4DA /* ImagePokemon.swift in Sources */,
 			);

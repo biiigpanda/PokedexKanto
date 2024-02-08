@@ -22,15 +22,18 @@ struct PokemonMainView: View {
                 ScrollView {
                         LazyVGrid(columns: gridElements, content: {
                                 ForEach(viewModel.pokemonDetail) { pokemonDetail in
-                                    ImagePokemon(pokemonDetail: pokemonDetail)
+                                    NavigationLink(destination: DetailPokemonView(pokemonDetail: pokemonDetail)) {
+                                        ImagePokemon(viewModel: viewModel, pokemonDetail: pokemonDetail)
+                                    }
                                 }
                         })
                 }
-                .navigationTitle("Pokedex Kanto")
+                .navigationTitle("Pokedex de Kanto")
                 .navigationBarTitleDisplayMode(.inline)
+                .navigationBarBackButtonHidden()
+                .searchable(text: $searchText)
             }
         }
-        .searchable(text: $searchText)
         .environmentObject(viewModel)
     }
 }
